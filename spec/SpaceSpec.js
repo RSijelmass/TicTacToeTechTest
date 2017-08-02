@@ -14,5 +14,8 @@ describe('Space', function() {
 	it('doesn\'t take in other value', function() {
 			expect( function() { space.fillIn('R') } ).toThrow('This move is not allowed!')
 		});
+	it('doesn\'t take in no value', function() {
+			expect( function() { space.fillIn() } ).toThrow('This move is not allowed!')
+		});
 	});
 });
