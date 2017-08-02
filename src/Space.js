@@ -6,3 +6,4 @@ Space = function() {
 		throw 'This move is not allowed!'
 	};
 };
+
