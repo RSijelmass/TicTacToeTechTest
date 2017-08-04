@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-	document.getElementById('X').addEventListener('click', function() {
-		console.log('You chose X!');
-	});
 
-	document.getElementById('O').addEventListener('click', function() {
-		console.log('You chose O!');
-	});
+	chooseSpace = function(space, move) {
+		document.getElementById(space).addEventListener('click', function() {
+			console.log(`You chose ${move} at ${space}!`);
+		});
+	}
 
-
+	document.getElementById('X').addEventListener('click', chooseSpace('1', 'X') );
+	document.getElementById('O').addEventListener('click', chooseSpace('1', 'O') );
 
 });
