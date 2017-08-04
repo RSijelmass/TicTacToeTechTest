@@ -10,4 +10,11 @@ describe('Board', function() {
 			expect(board.spaces).toEqual(emptySpaces)
 		});
 	});
+
+	describe('checks for a horizontal win', function() {
+		it('finds XXX win on first line', function() {
+			var board = new Board(['X','X','X','','','','','',''])
+			expect(board.isWin()).toEqual(true)
+		});
+	});
 });
