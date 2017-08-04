@@ -16,5 +16,9 @@ describe('Board', function() {
 			var board = new Board(['X','X','X','','','','','',''])
 			expect(board.isWin()).toEqual(true)
 		});
-	});
+	it('finds OOO win on first line', function() {
+			var board = new Board(['O','O','O','','','','','',''])
+			expect(board.isWin()).toEqual(true)
+		});
+});
 });

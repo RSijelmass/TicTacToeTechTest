@@ -2,7 +2,8 @@ Board = function(spaces) {
 	this.spaces = spaces;
 
 	this.isWin = function() {
-		if(spaces.slice(0,3).join() === 'X,X,X') { 
+		var line = spaces.slice(0,3).join()
+		if(line === 'X,X,X' || line === 'O,O,O') { 
 			return true; 
 		};
 	};
