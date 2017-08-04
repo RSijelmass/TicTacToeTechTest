@@ -2,7 +2,7 @@ describe('Board', function() {
 	var board;
 	var emptySpaces = ['','','','','','','','','']
 	beforeEach(function() {
-		board = new Board();
+		board = new Board(emptySpaces);
 	});
 	
 	describe('initialization', function() {
