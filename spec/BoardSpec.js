@@ -35,5 +35,13 @@ describe('Board', function() {
 		it('finds OOO win on second line', function() {
 			var board = new Board(['','','','','','','O','O','O'])
 			expect(board.isWin()).toEqual(true)
-		});});
+		});
+	});
+
+	describe('checks for a vertical win', function() {
+		it('finds XXX win on first line', function() {
+			var board = new Board(['X','','','X','','','X','',''])
+			expect(board.isWin()).toEqual(true)
+		});
+	});
 });
