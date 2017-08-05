@@ -6,12 +6,16 @@ document.addEventListener('DOMContentLoaded', function() {
 	function chooseSpace(space)  {
 		document.getElementById(space).addEventListener('click', function() {
 			document.getElementById(space).innerHTML = currentMove
-			currentMove = [nextMove, nextMove = currentMove][0];
+			swapMove();
 		});
 	}
 
 	for(var i=1; i<10; i++) {
 		document.getElementById(i.toString()).addEventListener('click', chooseSpace(i.toString()));
 	}
+
+	function swapMove() {
+		currentMove = [nextMove, nextMove = currentMove][0];
+	};
 
 	});
