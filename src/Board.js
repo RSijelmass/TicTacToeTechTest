@@ -1,8 +1,15 @@
 Board = function(spaces) {
 	this.spaces = spaces;
+	const SPACE_COMBINATIONS = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
 
 	this.isWin = function() {
+	//	SPACE_COMBINATIONS.forEach(function(combination) {
+	//		if(checkCombination(combination[0],combination[1],combination[2]) === true) {
+	//			return true;
+	//		};
+	//	});
 		if(isHorizontalWin() || isVerticalWin() || isDiagonalWin()) { return true };
+		return false;
 	};
 
 	checkCombination = function(spaceOne, spaceTwo, spaceThree) {
